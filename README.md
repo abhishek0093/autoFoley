@@ -1,6 +1,7 @@
 # Introduction 
 Ever Wondered about background soundtrack added to the movies, those "dhichkyoon" sound of pistols, those footsteps sound, those car racing sounds? How are they generated? You need to hire sound artists to generate those kinds of sounds, and the art is called Foley.
 But what if you don't have that much money to pay to artist or to pay for copyright usage or you just want to try something "new"? Well, then there is some good news for you. You can use a Deep Learning Model to generate a never-before music for your video, and that too almost free!! 
+
 In this project we would explore the possibility of automating the process of Foley with the help of Deep Learning, and hence the name AutoFoley. 
 
 # Flow ...
@@ -45,12 +46,13 @@ Note : I have trained the model to generate classical Piano tunes, and it can be
 ## PART3- Adding Music to Video
 We have saved both the lrcn_model and the music_model in google drive(save `project` folder to your drive), and we can use those saved model to make the final AutoFoley. User will give a `unknown` video as input, we will first run our `lrcn_model` to detect activity happening inside the video. Once activity has been detected, we will call the relevant `music_model` saved in drive to generate a music for the video. We will add the generated music to the video using the music21 library. 
 
-And guess what,from today onwards you can call yourself a partial sound artist(Okay Okay, not you but your laptop)!!.
 
 ### Results: 
 https://user-images.githubusercontent.com/111701999/185940112-5690d445-4311-48f6-bdf9-f771a2896ac4.mp4
 
 YES! We only gave it a silent video. And that music is copyright free !!
+
+And guess what,from today onwards you can call yourself a partial sound artist(Okay Okay, not you but your laptop)!!.
 
 
 # Table of Content 
@@ -67,6 +69,10 @@ YES! We only gave it a silent video. And that music is copyright free !!
   Outputs obtained in project. 
 * #### Plots :
   Various plots for the model . 
+
+# How To Use This 
+
+* Add the `project` folder to your google drive, and you are good to go. 
 
 # Further Improvements and Futute Planning : 
 * More Classes can be included for both lrcn_model and music_model to make it more general purpose. Music_model can be trained for larger SEQ_LEN to model more longer relationships between the notes. 
