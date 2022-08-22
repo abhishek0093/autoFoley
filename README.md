@@ -5,7 +5,7 @@ But what if you don't have that much money to pay to artist or to pay for copyri
 In this project we would explore the possibility of automating the process of Foley with the help of Deep Learning, and hence the name AutoFoley. 
 
 # Flow ...
-To Generate the music for a video scene, we must first recognize what's happening in the video. Then only a sound that is relevant to the video scene can be generated(think of playing horror music during car racing competition, funny na?).
+To Generate the music for a video scene, we must first recognize what's happening in the video. Then only a sound that is relevant to the video scene can be generated(Imagine a horror music in background of "Devdas" movie, funny na?).
 So the project would be splitted in three parts : 
 1) Recognizing the activity in video 
 2) Generating Music
@@ -52,7 +52,7 @@ https://user-images.githubusercontent.com/111701999/185940112-5690d445-4311-48f6
 
 YES! We only gave it a silent video. And that music is copyright free !!
 
-And guess what,from today onwards you can call yourself a partial sound artist(Okay Okay, not you but your laptop)!!.
+And, guess what,from today onwards you can call yourself a semi sound artist(Okay Okay, not you but your laptop)!!.
 
 
 # Table of Content 
