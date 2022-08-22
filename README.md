@@ -12,11 +12,19 @@ So the project would be splitted in three parts :
 # PART1- Recognizing Activity(LRCN Model):
 Object detection through image is quite straightforward as there is only spatial information to deal with, but for video activity recognisition we also have time dependent temporal information. CNNs are great at extracting out spatial information, while LSTMs are great to deal with sequential data, so why not to use combination of them to detect activity in the video, and call it out as LRCN (Long-term Recurrent Convolutional Network).
 ## Approach 
-The video is nothing but collection of various frames. If we have computation power we can process each frames, but otherwise splitting the entire video equally in {SEQUENCE_LENGTH} of frames will also give the gist of activity happening in the video. To train the model, we will split each video in eqidistant {SEQUENCE_LENGTH} frames and the corresponding target label would be the activity. The frames would be fed out to CNN layers which will extract out spatial features, and those extracted features would be fed to a LSTM model to train the model on the embedded time information in the video.
+The video is nothing but collection of various frames. If we have computation power we can process each frames, but otherwise splitting the entire video equally in {SEQUENCE_LENGTH} of frames will also give the gist of activity happening in the video. To train the model, we will split each video in eqidistant {SEQUENCE_LENGTH} frames and the corresponding target label would be the activity. The frames would be fed out to CNN layers which will extract out spatial features, and those extracted features would be fed to a LSTM model to train the model on the embedded time information in the video. Currently the model has been trained to recognize {PlayingPiano,HorseRace, Swing, Tai-chi} classes, trained on subset on UCF-50 Dataset.  
 
 # PART2- Generating Music 
+ Music is composed of notes and chords, and the entire music can be represented with a midi file which contain all the details of various notes played, their location and time duration. 
+## Approach : 
+We choose a SEQ_LEN, a window size at which we will be looking to make prediction for the next note. We split our midi files into notes of length of SEQ_LEN and the corresponding target note would be the actual next note in the music. The relationship between given set of notes of SEQ_LEN and targetted output would be learnt by our model during training.
+At Music generation time, we would randomly select a starting point(of SEQ_LEN from train data), and model will make the prediction of next note. We will include the made prediction in our Window while excluding the element that came first and this will continue for desired amount of time. 
+Note : I have trained the model to generate classical Piano tunes, and it can be changed as per needs by adding the relevant training data.
 
 # PART3- Adding Music to Video
+We have saved both the lrcn_model and the music_model in google drive, and we can use those saved model to make the final AutoFoley. User will give a `unknown` video as input, we will first run our `lrcn_model` to detect activity happening inside the video. Once activity has been detected, we will call the relevant `music_model` saved in drive to generate a music for the video. We will add the generated music to the video using the music21 library. 
+
+And guress what, You have now become a sound artist too(Okay Okay, not you but your laptop)!! . 
 
 # Table of Content 
 
