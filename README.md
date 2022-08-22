@@ -32,8 +32,8 @@ https://user-images.githubusercontent.com/111701999/185932993-e5b141ef-9b02-4daa
 ## PART2- Generating Music 
 Music is composed of notes and chords, and the entire music can be represented with a midi file which contain all the details of various notes played, their location and time duration. 
 ### Approach : 
-We choose a window of size {SEQ_LEN} at which we will be looking to make prediction for the next note. We split our midi files into notes of length of SEQ_LEN and the corresponding target note would be the actual next note in the music. The relationship between given set of notes of SEQ_LEN and targetted output would be learnt by our model during training.
-At Music generation time, we would randomly select a starting point(of SEQ_LEN from train data), and model will make the prediction of next note. We will include the made prediction in our Window while excluding the element that came first and this will continue for desired amount of time. 
+We choose a window of size {SEQ_LEN} at which we will be looking to make prediction for the next note. We store our midi files into a list with each element equal to window of size equal {SEQ_LEN} and the corresponding target note would be the actual next note in the music. The relationship between given set of notes of SEQ_LEN and targeted output would be learnt by our model during training.
+During Music generation time, we would randomly select a starting point(of SEQ_LEN from training data), and model will make the prediction of next note. We will include the prediction in our Window while excluding the element that came first and this will continue for desired amount of time. 
 Note : I have trained the model to generate classical Piano tunes, and it can be changed as per needs by adding the relevant training data.
 
 ### Results: 
@@ -43,9 +43,9 @@ Note : I have trained the model to generate classical Piano tunes, and it can be
 
 
 ## PART3- Adding Music to Video
-We have saved both the lrcn_model and the music_model in google drive, and we can use those saved model to make the final AutoFoley. User will give a `unknown` video as input, we will first run our `lrcn_model` to detect activity happening inside the video. Once activity has been detected, we will call the relevant `music_model` saved in drive to generate a music for the video. We will add the generated music to the video using the music21 library. 
+We have saved both the lrcn_model and the music_model in google drive(save `project` folder to your drive), and we can use those saved model to make the final AutoFoley. User will give a `unknown` video as input, we will first run our `lrcn_model` to detect activity happening inside the video. Once activity has been detected, we will call the relevant `music_model` saved in drive to generate a music for the video. We will add the generated music to the video using the music21 library. 
 
-And guess what, You have now become a sound artist too(Okay Okay, not you but your laptop)!!.
+And guess what,from today onwards you can call yourself a partial sound artist(Okay Okay, not you but your laptop)!!.
 
 ### Results: 
 https://user-images.githubusercontent.com/111701999/185940112-5690d445-4311-48f6-bdf9-f771a2896ac4.mp4
