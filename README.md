@@ -18,25 +18,14 @@ The video is nothing but collection of various frames. If we have computation po
 <p align="center">
   <img src="https://user-images.githubusercontent.com/111701999/185924337-1f6be0e4-a6ba-4878-939b-1f79c57a9f44.png">
 </p>
-<br>
-
  
 <p align= "center">
   <img src="https://user-images.githubusercontent.com/111701999/185924343-ef0b9d69-da77-4720-a07d-c3c79accf6eb.png" align="center">
 </p>
-<br><br>
 
 ### Results
 
-
-
 https://user-images.githubusercontent.com/111701999/185932993-e5b141ef-9b02-4daa-ac28-27b97e72fd6a.mp4
-
-
-
-
-
-
 
 
 ## PART2- Generating Music 
@@ -46,10 +35,22 @@ We choose a SEQ_LEN, a window size at which we will be looking to make predictio
 At Music generation time, we would randomly select a starting point(of SEQ_LEN from train data), and model will make the prediction of next note. We will include the made prediction in our Window while excluding the element that came first and this will continue for desired amount of time. 
 Note : I have trained the model to generate classical Piano tunes, and it can be changed as per needs by adding the relevant training data.
 
+### Results: 
+
+<video src="https://user-images.githubusercontent.com/111701999/185937460-eed4cbb9-c66d-40db-99c6-2f4f014f7af2.mp4"  width="330" height="250">
+</video> 
+
+
 ## PART3- Adding Music to Video
 We have saved both the lrcn_model and the music_model in google drive, and we can use those saved model to make the final AutoFoley. User will give a `unknown` video as input, we will first run our `lrcn_model` to detect activity happening inside the video. Once activity has been detected, we will call the relevant `music_model` saved in drive to generate a music for the video. We will add the generated music to the video using the music21 library. 
 
-And guess what, You have now become a sound artist too(Okay Okay, not you but your laptop)!! . 
+And guess what, You have now become a sound artist too(Okay Okay, not you but your laptop)!!.
+
+### Results: 
+https://user-images.githubusercontent.com/111701999/185940112-5690d445-4311-48f6-bdf9-f771a2896ac4.mp4
+
+YES! We only gave it a silent video. And that music is copyright free. 
+
 
 # Table of Content 
 
@@ -76,3 +77,6 @@ https://learnopencv.com/introduction-to-video-classification-and-human-activity-
 https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5
 
 And some youtube videos :). 
+
+
+
