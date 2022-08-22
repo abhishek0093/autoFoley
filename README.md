@@ -37,6 +37,7 @@ Various plots for the model .
 
 # References : 
 https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/
+
 https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5
 
 And some youtube videos :). 
