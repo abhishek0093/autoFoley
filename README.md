@@ -10,7 +10,7 @@ So the project would be splitted in three parts :
 3) Stitching generated music to the video 
 
 # PART1- Recognizing Activity(LRCN Model):
-
+Object detection through image is quite straightforward as there is only spatial information to deal with, but for video activity recognisition we also have time dependent temporal information. CNNs are great at extracting out spatial information, while LSTMs are great to deal with sequential data, so why not to use combination of them to detect activity in the video, and call it out LRCN (Long-term Recurrent Convolutional Network). 
 
 # PART2- Generating Music 
 
