@@ -14,6 +14,31 @@ Object detection through image is quite straightforward as there is only spatial
 ### Approach 
 The video is nothing but collection of various frames. If we have computation power we can process each frames, but otherwise splitting the entire video equally in {SEQUENCE_LENGTH} of frames will also give the gist of activity happening in the video. To train the model, we will split each video in eqidistant {SEQUENCE_LENGTH} frames and the corresponding target label would be the activity. The frames would be fed out to CNN layers which will extract out spatial features, and those extracted features would be fed to a LSTM model to train the model on the embedded time information in the video. Currently the model has been trained to recognize {PlayingPiano,HorseRace, Swing, Tai-chi} classes, trained on subset on UCF-50 Dataset.  
 
+### Plots 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/111701999/185924337-1f6be0e4-a6ba-4878-939b-1f79c57a9f44.png">
+</p>
+<br>
+
+ 
+<p align= "center">
+  <img src="https://user-images.githubusercontent.com/111701999/185924343-ef0b9d69-da77-4720-a07d-c3c79accf6eb.png" align="center">
+</p>
+<br><br>
+
+### Results
+
+
+
+https://user-images.githubusercontent.com/111701999/185932993-e5b141ef-9b02-4daa-ac28-27b97e72fd6a.mp4
+
+
+
+
+
+
+
+
 ## PART2- Generating Music 
  Music is composed of notes and chords, and the entire music can be represented with a midi file which contain all the details of various notes played, their location and time duration. 
 ### Approach : 
@@ -24,7 +49,7 @@ Note : I have trained the model to generate classical Piano tunes, and it can be
 ## PART3- Adding Music to Video
 We have saved both the lrcn_model and the music_model in google drive, and we can use those saved model to make the final AutoFoley. User will give a `unknown` video as input, we will first run our `lrcn_model` to detect activity happening inside the video. Once activity has been detected, we will call the relevant `music_model` saved in drive to generate a music for the video. We will add the generated music to the video using the music21 library. 
 
-And guress what, You have now become a sound artist too(Okay Okay, not you but your laptop)!! . 
+And guess what, You have now become a sound artist too(Okay Okay, not you but your laptop)!! . 
 
 # Table of Content 
 
