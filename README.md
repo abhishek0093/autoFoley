@@ -68,7 +68,7 @@ YES! We only gave it a silent video. And that music is copyright free !!
   Various plots for the model . 
 
 # Further Improvements and Futute Planning : 
-* More Classes can be included for both lrcn_model and music_model to make it more general purpose. 
+* More Classes can be included for both lrcn_model and music_model to make it more general purpose. Music_model can be trained for larger SEQ_LEN to model more longer relationships between the notes. 
 * API can be written to provide better experience to non-technical users. 
 
 # References : 
