@@ -9,6 +9,26 @@ So the project would be splitted in three parts :
 2) Generating Music
 3) Stitching generated music to the video 
 
-## Project Structure : 
+# PART1- Recognizing Activity(LRCN Model):
 
 
+# PART2- Generating Music 
+
+# PART3- Adding Music to Video
+
+# Table of Content 
+
+* #### autofoley_lrcn.ipynb #### : Google Colab file to train the LRCN Model. Can also be used solo to detect the activity happening in a video. 
+* #### autofoley_music_generator.ipynb #### : Google Colab file to train the music_model. Can also be used solo to generate only the music. 
+* #### autofoley_final.ipynb #### : Google Colab file that uses above trained models to make final AutoFoley. 
+* #### Project #### : Folder that you should add to your google drive to use the project. Contains saved models, saved helper values, test_videos etc.
+* #### Outputs #### : Outputs obtained in project. 
+* #### Plots #### : Various plots for the model . 
+
+# Further Improvements : 
+More Classes can be included for both lrcn_model and music_model to make it more general.
+
+# References : 
+https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/
+https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5
+And some youtube videos :). 
