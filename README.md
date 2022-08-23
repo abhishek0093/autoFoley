@@ -37,6 +37,7 @@ Music is composed of notes and chords, and the entire music can be represented w
 ### Approach : 
 We choose a window of size {SEQ_LEN} at which we will be looking to make prediction for the next note. We store our midi files into a list with each element equal to window of size equal {SEQ_LEN} and the corresponding target note would be the actual next note in the music. The relationship between given set of notes of SEQ_LEN and targeted output would be learnt by our model during training.
 During Music generation time, we would randomly select a starting point(of SEQ_LEN from training data), and model will make the prediction of next note. We will include the prediction in our Window while excluding the element that came first and this will continue for desired amount of time. 
+
 Note : I have trained the model to generate classical Piano tunes, and it can be changed as per needs by adding the relevant training data.
 
 ### Results: 
