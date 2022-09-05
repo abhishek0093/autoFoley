@@ -82,9 +82,10 @@ And, guess what,from today onwards you can call yourself a semi sound artist(Oka
 * API can be written to provide better experience to non-technical users. 
 
 # References : 
-https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/
 
-https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5
+[learnopencv_article](https://learnopencv.com/introduction-to-video-classification-and-human-activity-recognition/)
+
+[towardsdatascience_article](https://towardsdatascience.com/how-to-generate-music-using-a-lstm-neural-network-in-keras-68786834d4c5)
 
 And some youtube videos :). 
 
